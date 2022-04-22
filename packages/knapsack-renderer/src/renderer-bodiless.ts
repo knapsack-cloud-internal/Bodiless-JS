@@ -62,6 +62,7 @@ function isKsTemplateSpecMeta(meta: unknown): meta is KsTemplateSpecMeta {
 
 export class KnapsackBodilessRenderer extends Base implements Renderer {
   title: string;
+
   constructor({
     webpackConfig,
     demoWrapperPath,
