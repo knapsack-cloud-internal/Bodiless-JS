@@ -38,8 +38,8 @@ import {
   withDesign,
   replaceWith,
   remove,
+  A,
 } from '@bodiless/fclasses';
-import { GatsbyLink } from '@bodiless/gatsby-theme-bodiless';
 import {
   asBold,
   asEditableLink,
@@ -65,7 +65,7 @@ const withStartingTrailIcon = (
         addProps({ href: '/' }),
         withNode,
         withNodeKey(nodeKeys),
-      )(GatsbyLink),
+      )(A),
     ),
   }),
 );
@@ -111,7 +111,7 @@ const withSlashSeparator = withDesign({
 
 const withAccessibleSeparator = withDesign({
   Separator: flowHoc(
-    addClasses('border-black border-r-2 h-4 mx-1.5 rotate-12 self-center transform'),
+    addClasses('border-black border-r-2 h-4 rotate-12 self-center transform'),
     withSeparator(''),
   ),
 });

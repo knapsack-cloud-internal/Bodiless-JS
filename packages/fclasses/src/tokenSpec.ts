@@ -15,58 +15,57 @@
 import mergeWith from 'lodash/mergeWith';
 import flow from 'lodash/flow';
 import { ComponentType } from 'react';
-import identity from 'lodash/identity';
-import pick from 'lodash/pick';
 import { startWith } from './replaceable';
 import type {
-  TokenDef, // FlowHoc,
+  HOCDef,
   DesignableComponents, HocDesign,
-  ReservedDomains, Design, Token, HOCBase, HOD, AsTokenSpec, FinalDesign, TokenSpec,
+  ReservedDomains, Design, Token, HOD, AsTokenSpec, FinalDesign, TokenSpec, FinalDomains,
 } from './types';
-import { $TokenSpec } from './types';
+import { $TokenSpec, HOC } from './types';
 import { flowHoc, extendMeta } from './flowHoc';
 import { addClasses } from './addClasses';
 import { withHocDesign } from './withHocDesign';
-// import omit from 'lodash/omit';
 
 /**
-     * @private
-     * Converts a domain into an HOC which applies the extended design defined
-     * by that domain.  Properly handles special domain names ('Condition',
-     * 'Compose' and 'Meta').
-     *
-     * @param domainName
-     * @param domain
-     */
+ * Converts a domain into an HOC which applies the extended design defined
+ * by that domain.  Properly handles special domain names ('Flow',
+ * 'Compose' and 'Meta').
+ *
+ * @param domainName
+ * @param domain
+ */
 function getHocForDomain<C extends DesignableComponents, D extends object = any>(
   domainName: string,
   domain?: FinalDesign<C> | ReservedDomains<C, any>['Meta'] | ReservedDomains<C, any>['Flow'] | ReservedDomains<C, any>['Compose']
-): TokenDef | undefined {
+): HOCDef | undefined {
   if (!domain) return undefined;
   if (domainName === 'Flow') return undefined;
   if (domainName === 'Meta') return Array.isArray(domain) ? extendMeta(...domain) : domain;
   if (domainName === 'Compose') {
-    const compose = domain as ReservedDomains<C, D>['Compose'];
-    return as(...Object.values(compose || {}));
+    const compose = domain as Required<ReservedDomains<any, any>>['Compose'];
+    const toks = Object.values(compose);
+    return as(...toks);
   }
   return withDesign(domain as Design<C, D>);
 }
 
 /**
-     * Converts a list of token into an HOC which can be applied to
-     * a component. Tokens to apply may be expressed in token object notation, as HOC's
-     * or as className strings.
-     *
-     * @param specs
-     * A list of token to be composed.
-     *
-     * @returns
-     * An HOC which can be applied to a component.
-     */
+ * Converts a list of token into an HOC which can be applied to
+ * a component. Tokens to apply may be expressed in token object notation, as HOC's
+ * or as className strings.
+ *
+ * @param specs
+ * A list of token to be composed.
+ *
+ * @returns
+ * An HOC which can be applied to a component.
+ *
+ * @category Token API
+ */
 function as(
   ...args$: Token[]
 
-): HOCBase<any, any, any> {
+): HOC<any, any, any> {
   const args = args$.filter(Boolean);
 
   // Ensure that all token specs have been passed through `asTokenSpec`
@@ -77,10 +76,10 @@ function as(
     }
   });
 
-  const tokens: TokenDef[] = args.map(arg => {
+  const tokens: HOCDef[] = args.map(arg => {
     if (typeof arg === 'function' || typeof arg === 'undefined') return arg;
     if (typeof arg === 'string') return addClasses(arg);
-    const specTokens: TokenDef[] = [];
+    const specTokens: HOCDef[] = [];
     // Use keys of the base token spec to ensure correct order of domains.
     // const keys = [
     //   ...Object.getOwnPropertyNames(omit(arg, 'Meta', 'Compose', 'Flow')),
@@ -111,10 +110,12 @@ function as(
  *
  * @returns
  * An hoc which applies the design.
+ *
+ * @category Design API
  */
 function withDesign<C extends DesignableComponents = any, D extends object = any>(
   design: Design<C, D>
-): HOCBase {
+): HOC {
   const hocDesign: HocDesign<C> = Object.keys(design)
     .filter(k => k !== '_')
     .reduce(
@@ -125,16 +126,15 @@ function withDesign<C extends DesignableComponents = any, D extends object = any
       {} as HocDesign<any>
     );
   return flowHoc(
-    as(design._) as HOCBase,
+    as(design._),
     withHocDesign(hocDesign)
   );
   // return withHocDesign(hocDesign);
 }
 
 /**
-     * @private
-     * Customizer for merging two token specifications.
-     */
+ * Customizer for merging two token specifications.
+ */
 const tokenMergeCustomizer = (...args: any) => {
   const stack = args[5];
   const [a, b, key] = args;
@@ -144,7 +144,6 @@ const tokenMergeCustomizer = (...args: any) => {
       if (a && b) return flow(a, b);
       if (a) return a;
       if (b) return b;
-      return identity;
     }
     return undefined;
   }
@@ -154,64 +153,18 @@ const tokenMergeCustomizer = (...args: any) => {
 };
 
 /**
-     * Utiity to merge two tokens. inner key values are composed together via `t`.
-     *
-     * @param a, b
-     * HOC specifications to merge.
-     *
-     * @return
-     * A new token specification containing the merged keys.
-     *
-     * @example
-     * ```
-     * const asTestTokenSpec = asTokenSpec<{
-     *   A: ComponentType<any>,
-     *   B: ComponentType<any>,
-     * }>();
-     * const Left = asTestTokenSpec({
-     *   Foo: {
-     *     B: 'b',
-     *   },
-     *   Bar: {@typescript-eslint/space-infix-ops
-     *     B: 'b2',
-     *   },
-     * });
-     * const Right = asTestTokenSpec({
-     *   Foo: {
-     *     B: 'b1',
-     *     A: 'a',
-     *   },
-     *   Baz: {
-     *     A: 'a2',
-     *   },
-     * });
-     * const Test = extend(Left, Right);
-     * const Expected = asTestTokenSpec({
-     *     Foo: {
-     *       B: as('b', 'b1'), // Note this will create `className="b1 b"`
-     *       A: 'a',
-     *     },
-     *     Bar: {
-     *       B: 'b2',
-     *     },
-     *     Baz: {
-     *       A: 'a2',
-     *     },
-     * });
-     * ```
-     */
-
-/**
-     * Utility to extend a domain value. The final domain will contain the union of
-     * keys from all merged designs. In the case where two or more designs have the
-     * same key, the value of that key will be composed using `t`.
-     *
-     * @param d
-     * The base design to be extended.
-     *
-     * @param ...designs
-     * Designs to extend the base design.
-     */
+ * Utility to extend a domain value. The final domain will contain the union of
+ * keys from all merged designs. In the case where two or more designs have the
+ * same key, the value of that key will be composed using `t`.
+ *
+ * @param d
+ * The base design to be extended.
+ *
+ * @param ...designs
+ * Designs to extend the base design.
+ *
+ * @category Design API
+ */
 function extendDesign<C extends DesignableComponents, D extends object = any>(
   ...designs: Design<C, D>[]
 ): Design<C, D> {
@@ -228,9 +181,11 @@ function extendDesign<C extends DesignableComponents, D extends object = any>(
  *
  * @returns
  * An HOD which will extend the base design with the supplied designs.
+ *
+ * @category Design API
  */
 const extendDesignWith = (
-  ...dx: (Design|HOD<any, any>)[]
+  ...dx: (Design | HOD<any, any>)[]
 ) => (
   d?: Design
 ) => extendDesign(d || {}, ...dx.map(
@@ -238,23 +193,25 @@ const extendDesignWith = (
 ));
 
 /**
-     * Utility to apply tokens to a specified clean component.
-     *
-     * @param CleanComponent
-     * The clean starting component to which tokens should be applied.
-     *
-     * @returns
-     * A function which applies tokens to the clean component.
-     *
-     * @example
-     * ```
-     * on(FooClean)(cxFoo.Default, 'bar');
-     * ```
-     * is equivalent to
-     * ```
-     * as(startWith(FooClean), cxFoo.Default, 'bar');
-     * ```
-     */
+ * Utility to apply tokens to a specified clean component.
+ *
+ * @param CleanComponent
+ * The clean starting component to which tokens should be applied.
+ *
+ * @returns
+ * A function which applies tokens to the clean component.
+ *
+ * @example
+ * ```
+ * on(FooClean)(vitalFoo.Default, 'bar');
+ * ```
+ * is equivalent to
+ * ```
+ * as(startWith(FooClean), vitalFoo.Default, 'bar');
+ * ```
+ *
+ * @category Token API
+ */
 const on = (
   CleanComponent: ComponentType<any>
 ) => <C extends DesignableComponents, D extends object = any>(
@@ -265,35 +222,78 @@ const on = (
   );
 
 /**
- * Helper function to improve type inference in token specifications, and to ensure that
- * the order of domains is consistent for all tokens.
+ * Used to create a token specification.
+ *
+ * A token specification is an object which organizes Token HOC's into "domains" which
+ * can then be selectively overridden. With the exception of certain [[ReservedDomains]],
+ * each domain is a [[Design]], defining a set of HOC's which should be applied to
+ * the individual design keys (or slots) in the target component.
+ *
+ * Normally, each component will use this create its own `as...Token` function in order
+ * to ensure type safety for the keys in the design.
  *
  * @param d
- * If specified, defines a circumscribed set of allowed token domains.
+ * If specified, defines a circumscribed set of allowed token domains.  If omitted, a single
+ * 'Core' domain will be allowed.  The resulting function will produce a token specification
+ * in which all domains are guaranteed to be present (those which were not defined will be
+ * empty objects). The order of the domains is consistent and defined by the order of the keys
+ * in this parameter.
  *
  * @returns
- * Function which recieves an object as a parameter and returns a normalized token
- * specification based on that object.
+ * Function which receives a set of partial token speciications and returns a normalized token
+ * specification created by merging those partials.  Each parameter may be:
+ * - a partial tokens specification object, in which case the keys must belong to the set of
+ *   allowed domains.  Keys will be re-ordered to match the canonoical order, and missing keys
+ *   will be supplied.
+ * - a string, which will be treated as a set of classes to be applied to the `_` key of the
+ *   `Core` domain.  The `_` key in a design applies HOC's or classes to the component as a
+ *   whole rather than one of its slots.
+ * - a function, which will be treated as an HOC to be applied to the `_` key of the `Core`
+ *   domain.
  *
- * @see https://stackoverflow.com/questions/54598322/how-to-make-typescript-infer-the-keys-of-an-object-but-define-type-of-its-value
+ * @example
+ * Create an `asTokenSpec` utility which restricts domains:
+ * ```
+ * const domains = {
+ *   Core: any,
+ *   Theme: any,
+ *   Layout: any,
+ * };
+ * const asMyTokenSpec = <
+ *   C extends DesignableComponents
+ * >() => asTokenSpec<C, DefaultDomains>(domains);
+ * ```
+ * And use it to create an `as...Token` utiity which restricts domains.
+ * ```
+ * type FooComponens = {
+ *   Wrapper: ComponentOrTag<any>,
+ *   Title: ComponentOrTag<any>,
+ *   Body: ComponentOrTag<any>,
+ *  };
+ * const asFooToken = asMyTokenSpec<FooComponents>();
+ * ```
+ *
+ * @category Token API
  */
 const asTokenSpec = <
   C extends DesignableComponents,
-  D extends object,
->(d?: D): AsTokenSpec<C, D> => (...specs) => {
-    const [spec0, ...restSpecs] = specs;
-    const mergedSpec = { ...spec0 };
-    mergeWith(
-      mergedSpec, ...restSpecs, tokenMergeCustomizer
+  D extends object = { Core: any },
+  >(d: D = { Core: undefined } as D): AsTokenSpec<C, D> => (...specs) => {
+    const spec: FinalDomains<C, D> = Object.keys(d || {}).reduce(
+      (acc, next) => ({
+        ...acc,
+        [next]: {},
+      }), {},
     );
-    const orderedSpec = d
-      // Ensure order of keys in resulting token matches order of domains.
-      ? pick(mergedSpec, ...Object.getOwnPropertyNames(d), 'Meta', 'Compose', 'Flow')
-      : mergedSpec;
-    // Add an identifying key to ensure that tokens passed through `as`
-    // have been defined with `asTokenSpec`, thus guaranteeing proper order
-    // of domain keys.
-    return { ...orderedSpec, [$TokenSpec]: true } as any;
+    spec.Compose = {};
+    spec.Flow = undefined;
+    spec.Meta = {};
+    const coreDomain = Object.keys(d)[0];
+    const normalSpecs = specs.map(s => (
+      typeof s === 'string' || typeof s === 'function' ? { [coreDomain]: { _: s } } : s
+    ));
+    mergeWith(spec, ...normalSpecs, tokenMergeCustomizer);
+    return { ...spec, [$TokenSpec]: true } as TokenSpec<C, D>;
   };
 
 export {
@@ -310,7 +310,9 @@ export {
  *
  * @param a
  * The Token to test.
+ *
+ * @category Token API
  */
-export const isTokenSpec = (a: Token): a is TokenSpec<any, any, any> => (
+export const isTokenSpec = (a: Token): a is TokenSpec<any, any> => (
   typeof a !== 'function' && typeof a !== 'string'
 );

@@ -1,0 +1,12 @@
+{
+  "VitalDesignSystem": {
+    "Components": {
+      "VitalEditors": {
+          "README.md": "./doc/README.md",
+          "RichTextCustomizing.md": "./doc/RichTextCustomizing.md",
+          "RTE_Editor.md": "./doc/RichText.md",
+          "PlainEditor.md": "./doc/PlainEditor.md"
+      }
+    }
+  }
+}

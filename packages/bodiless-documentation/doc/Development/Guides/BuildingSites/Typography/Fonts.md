@@ -79,7 +79,7 @@ bundle, which is possibly the most performant option.
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-  purge: [
+  content: [
     './lib/**/!(*.d).{ts,js,jsx,tsx}',
   ],
   theme: {
@@ -96,7 +96,7 @@ module.exports = {
           fontFamily: 'linkicons',
           fontWeight: 400,
           fontStyle: 'normal',
-          src: 'url(\'@bodiless/cx-link/assets/font/linkicons.woff2\')',
+          src: 'url(\'@bodiless/vital-link/assets/font/linkicons.woff2\')',
         },
       });
     }),

@@ -3,6 +3,309 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.25](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.24...v1.0.0-rc.25) (2023-03-01)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.24](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.23...v1.0.0-rc.24) (2023-02-23)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.23](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.22...v1.0.0-rc.23) (2023-02-08)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.22](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.21...v1.0.0-rc.22) (2022-10-27)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.21](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.20...v1.0.0-rc.21) (2022-10-19)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.20](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.19...v1.0.0-rc.20) (2022-10-19)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.19](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.18...v1.0.0-rc.19) (2022-10-18)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.18](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.17...v1.0.0-rc.18) (2022-10-17)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.17](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.16...v1.0.0-rc.17) (2022-09-30)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.16](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.15...v1.0.0-rc.16) (2022-09-22)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.15](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.14...v1.0.0-rc.15) (2022-08-24)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.14](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.13...v1.0.0-rc.14) (2022-08-16)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.13](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.12...v1.0.0-rc.13) (2022-08-01)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.12](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.11...v1.0.0-rc.12) (2022-07-08)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.11](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.10...v1.0.0-rc.11) (2022-07-05)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.10](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.9...v1.0.0-rc.10) (2022-06-28)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.9](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.8...v1.0.0-rc.9) (2022-06-27)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.8](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.7...v1.0.0-rc.8) (2022-06-23)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.7](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.6...v1.0.0-rc.7) (2022-06-17)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.6](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.5...v1.0.0-rc.6) (2022-06-16)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.5](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.4...v1.0.0-rc.5) (2022-06-16)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.4](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.3...v1.0.0-rc.4) (2022-06-16)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.3](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2022-06-10)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-rc.2](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.1...v1.0.0-rc.2) (2022-06-03)
+
+
+### Features
+
+* **playwright:** Migration from cypress to playwright ([#1487](https://github.com/johnsonandjohnson/bodiless-js/issues/1487)) ([0903817](https://github.com/johnsonandjohnson/bodiless-js/commit/090381731e21108e59b715d4b947eeb1838a5a09))
+
+
+
+
+
+# [1.0.0-rc.1](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.18...v1.0.0-rc.1) (2022-05-20)
+
+
+### Bug Fixes
+
+* Fix Content Library hover indicator missing ([#1786](https://github.com/johnsonandjohnson/bodiless-js/issues/1786)) ([021be20](https://github.com/johnsonandjohnson/bodiless-js/commit/021be20132149e70d6db366ccc8c54f468ade423))
+
+
+
+
+
+# [1.0.0-beta.18](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.17...v1.0.0-beta.18) (2022-05-11)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-beta.17](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.16...v1.0.0-beta.17) (2022-05-11)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-beta.16](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2022-05-11)
+
+
+### Features
+
+* **vital-flowcontainer, --vital--:** Add content library functionality to vital flow container ([#1733](https://github.com/johnsonandjohnson/bodiless-js/issues/1733)) ([fbe1907](https://github.com/johnsonandjohnson/bodiless-js/commit/fbe19078e6f7e8b7810f7d87f95795ef49b168d3))
+
+
+
+
+
+# [1.0.0-beta.15](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2022-05-10)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-beta.13](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2022-05-05)
+
+
+### Bug Fixes
+
+* **bodiless-layouts:** only orange on hover ([#1677](https://github.com/johnsonandjohnson/bodiless-js/issues/1677)) ([90b3f13](https://github.com/johnsonandjohnson/bodiless-js/commit/90b3f13980c14c7f761921cf53e31031fe608a5f))
+
+
+
+
+
+# [1.0.0-beta.12](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2022-05-02)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-beta.11](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2022-04-28)
+
+
+### Bug Fixes
+
+* **bodiless-layouts & layouts-ui:** empty = gray ([#1646](https://github.com/johnsonandjohnson/bodiless-js/issues/1646)) ([eef363a](https://github.com/johnsonandjohnson/bodiless-js/commit/eef363ae64bf6c840f093ef70ee1518dd762aca1))
+
+
+
+
+
+# [1.0.0-beta.10](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2022-04-26)
+
+**Note:** Version bump only for package @bodiless/layouts
+
+
+
+
+
+# [1.0.0-beta.9](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.5...v1.0.0-beta.9) (2022-04-21)
+
+
+### Bug Fixes
+
+* **bodiless-ui:** try find all missing bl- prefixes in editor  ([#1589](https://github.com/johnsonandjohnson/bodiless-js/issues/1589)) ([942cfd6](https://github.com/johnsonandjohnson/bodiless-js/commit/942cfd6dc522341a757f70b84cf6879f5690332b))
+* **gatsby-theme-bodiless:** Revert crypto-js ([4cb1c8a](https://github.com/johnsonandjohnson/bodiless-js/commit/4cb1c8ab61186e138bed7d3ce47436d4530f90a2))
+* **material-icons:** remove dependency on google fonts material fonts css & clean up of components. ([#1580](https://github.com/johnsonandjohnson/bodiless-js/issues/1580)) ([013d547](https://github.com/johnsonandjohnson/bodiless-js/commit/013d547316b122904a3561406fa5c88fd2385679))
+
+
+
+
+
+# [1.0.0-beta.7](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.5...v1.0.0-beta.7) (2022-04-13)
+
+
+### Bug Fixes
+
+* **gatsby-theme-bodiless:** Revert crypto-js ([4cb1c8a](https://github.com/johnsonandjohnson/bodiless-js/commit/4cb1c8ab61186e138bed7d3ce47436d4530f90a2))
+
+
+
+
+
 # [1.0.0-beta.5](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2022-04-13)
 
 **Note:** Version bump only for package @bodiless/layouts

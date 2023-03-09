@@ -3,6 +3,327 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.25](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.24...v1.0.0-rc.25) (2023-03-01)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.24](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.23...v1.0.0-rc.24) (2023-02-23)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.23](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.22...v1.0.0-rc.23) (2023-02-08)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.22](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.21...v1.0.0-rc.22) (2022-10-27)
+
+
+### Bug Fixes
+
+* **core:** Support nested default content [canary] ([#1964](https://github.com/johnsonandjohnson/bodiless-js/issues/1964)) ([9eec257](https://github.com/johnsonandjohnson/bodiless-js/commit/9eec25715ea6fb40234d9b7a7e0d3d8b8e3b89b7))
+
+
+
+
+
+# [1.0.0-rc.21](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.20...v1.0.0-rc.21) (2022-10-19)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.20](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.19...v1.0.0-rc.20) (2022-10-19)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.19](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.18...v1.0.0-rc.19) (2022-10-18)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.18](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.17...v1.0.0-rc.18) (2022-10-17)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.17](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.16...v1.0.0-rc.17) (2022-09-30)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.16](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.15...v1.0.0-rc.16) (2022-09-22)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.15](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.14...v1.0.0-rc.15) (2022-08-24)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.14](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.13...v1.0.0-rc.14) (2022-08-16)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.13](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.12...v1.0.0-rc.13) (2022-08-01)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.12](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.11...v1.0.0-rc.12) (2022-07-08)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.11](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.10...v1.0.0-rc.11) (2022-07-05)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.10](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.9...v1.0.0-rc.10) (2022-06-28)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.9](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.8...v1.0.0-rc.9) (2022-06-27)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.8](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.7...v1.0.0-rc.8) (2022-06-23)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.7](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.6...v1.0.0-rc.7) (2022-06-17)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.6](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.5...v1.0.0-rc.6) (2022-06-16)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.5](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.4...v1.0.0-rc.5) (2022-06-16)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.4](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.3...v1.0.0-rc.4) (2022-06-16)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-rc.3](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2022-06-10)
+
+
+### Features
+
+* **bodiless-ga4 & akamai-auth:** Update the Bodiless GA4 plugin and add Akamai Auth Plugin [canary] ([#1647](https://github.com/johnsonandjohnson/bodiless-js/issues/1647)) ([200d935](https://github.com/johnsonandjohnson/bodiless-js/commit/200d93523da2d68e8740a98bf18a496d3c077060))
+
+
+
+
+
+# [1.0.0-rc.2](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.1...v1.0.0-rc.2) (2022-06-03)
+
+
+### Features
+
+* **bodiless-core:** BodilessJS Remove AsBodilessComponent Edit code from Static bundle [#1542](https://github.com/johnsonandjohnson/bodiless-js/issues/1542) ([#1785](https://github.com/johnsonandjohnson/bodiless-js/issues/1785)) ([3ab1ba8](https://github.com/johnsonandjohnson/bodiless-js/commit/3ab1ba88b03811a4a9100125d4a649db5667e89c))
+* **vital-buttons:** Add Buttons ([#1781](https://github.com/johnsonandjohnson/bodiless-js/issues/1781)) ([e9dc1e5](https://github.com/johnsonandjohnson/bodiless-js/commit/e9dc1e55ed6f9d19dfa7d86375efd2b5ce5ca612))
+
+
+
+
+
+# [1.0.0-rc.1](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.18...v1.0.0-rc.1) (2022-05-20)
+
+
+### Bug Fixes
+
+* **@sites/test-site:** Disable tsconfig-paths-webpack-plugin with environment variable ([#1775](https://github.com/johnsonandjohnson/bodiless-js/issues/1775)) ([d849a5e](https://github.com/johnsonandjohnson/bodiless-js/commit/d849a5e892b83909873c0567308ede67ace2176b))
+
+
+### Features
+
+* **vital-hero, vital-image, vital-card:** Add Hero & Card component and update Image  ([#1500](https://github.com/johnsonandjohnson/bodiless-js/issues/1500)) ([95f2c3d](https://github.com/johnsonandjohnson/bodiless-js/commit/95f2c3dcf06c6f51bb6b3d252ca6f4f576899dd4)), closes [pr#1498](https://github.com/pr/issues/1498)
+
+
+
+
+
+# [1.0.0-beta.18](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.17...v1.0.0-beta.18) (2022-05-11)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-beta.17](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.16...v1.0.0-beta.17) (2022-05-11)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-beta.16](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2022-05-11)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-beta.15](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2022-05-10)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-beta.14](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2022-05-05)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-beta.13](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2022-05-05)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-beta.12](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2022-05-02)
+
+
+### Features
+
+* **vital-table:** add vital table ([#1598](https://github.com/johnsonandjohnson/bodiless-js/issues/1598)) ([cb145ed](https://github.com/johnsonandjohnson/bodiless-js/commit/cb145ed8b22fd0d87f9bbd3eafbefcdfa1444c65))
+
+
+
+
+
+# [1.0.0-beta.11](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2022-04-28)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-beta.10](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2022-04-26)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
+# [1.0.0-beta.9](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.5...v1.0.0-beta.9) (2022-04-21)
+
+
+### Bug Fixes
+
+* **tailwindcss, fclasses:** Demo site content changes causing HMR bundle rebuild on edit env ([4b6fa0e](https://github.com/johnsonandjohnson/bodiless-js/commit/4b6fa0eda18d36b49d3a4c567ce52cb138457ef0))
+* **test-site, GatsbyLink:** There is a runtime error when clicking Logo after opening Email on /social-share/ ([#1602](https://github.com/johnsonandjohnson/bodiless-js/issues/1602)) ([d12134a](https://github.com/johnsonandjohnson/bodiless-js/commit/d12134acbfdf6dbccad695c0e6d71a9bac804552))
+* **test-site:** restore focus on search input. ([7be2f1c](https://github.com/johnsonandjohnson/bodiless-js/commit/7be2f1c61f19181e9d13414f0dfc1e12d29ac9ee))
+* **test-site:** use test site colors ([#1576](https://github.com/johnsonandjohnson/bodiless-js/issues/1576)) ([c7f7f48](https://github.com/johnsonandjohnson/bodiless-js/commit/c7f7f4869a17e57a186e0d7053cbf64781c0916a))
+
+
+### Features
+
+* **cli:** Bodiless new ([#1568](https://github.com/johnsonandjohnson/bodiless-js/issues/1568)) ([3bc0e2c](https://github.com/johnsonandjohnson/bodiless-js/commit/3bc0e2c8e06fe78751c0712d7e1d3cfb8d1fb04d)), closes [#1520](https://github.com/johnsonandjohnson/bodiless-js/issues/1520)
+* Fully disable save by env var. ([#1600](https://github.com/johnsonandjohnson/bodiless-js/issues/1600)) ([b19cd73](https://github.com/johnsonandjohnson/bodiless-js/commit/b19cd73422bcbb5e82125c4936b7aeb0c7c9cc7e)), closes [#1479](https://github.com/johnsonandjohnson/bodiless-js/issues/1479) [#1522](https://github.com/johnsonandjohnson/bodiless-js/issues/1522) [#1479](https://github.com/johnsonandjohnson/bodiless-js/issues/1479)
+
+
+
+
+
+# [1.0.0-beta.7](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.5...v1.0.0-beta.7) (2022-04-13)
+
+**Note:** Version bump only for package @sites/test-site
+
+
+
+
+
 # [1.0.0-beta.5](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2022-04-13)
 
 **Note:** Version bump only for package @sites/test-site
