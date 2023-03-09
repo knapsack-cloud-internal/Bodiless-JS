@@ -25,8 +25,8 @@ export interface KnapsackBodilessSpec<
    * The sub-components of the component. For example `CardComponents`
    */
   SubComponents extends Record<string, ComponentType> = Record<
-    string,
-    ComponentType
+  string,
+  ComponentType
   >,
 > {
   tokens: TokenCollection<any, any>;
@@ -37,14 +37,17 @@ export interface KnapsackBodilessSpec<
   componentExportName: string;
   /** Slots used, keys are slot names */
   slots: Partial<
-    Record<
-      keyof SubComponents,
-      {
-        title: string;
-        description?: string;
-        /** to restrict which patterns can be used in this slot, supply an array of patternIds. If empty, NO patterns are allowed, if `null`, all patterns are allowed. */
-        allowedPatternIds?: string[];
-      }
-    >
+  Record<
+  keyof SubComponents,
+  {
+    title: string;
+    description?: string;
+    /**
+         * to restrict which patterns can be used in this slot, supply an array of patternIds.
+         * If empty, NO patterns are allowed, if `null`, all patterns are allowed.
+         */
+    allowedPatternIds?: string[];
+  }
+  >
   >;
 }

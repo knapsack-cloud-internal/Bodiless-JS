@@ -62,6 +62,7 @@ function isKsTemplateSpecMeta(meta: unknown): meta is KsTemplateSpecMeta {
 
 export class KnapsackBodilessRenderer extends Base implements Renderer {
   title: string;
+
   constructor({
     webpackConfig,
     demoWrapperPath,
@@ -92,10 +93,9 @@ export class KnapsackBodilessRenderer extends Base implements Renderer {
   }
 
   getTemplateName(opt: { patternId: string; templateId: string }): string {
-    const hasSingleTemplate =
-      this.getMyTemplates().allTemplates.filter(
-        (t) => t.patternId === opt.patternId,
-      ).length === 1;
+    const hasSingleTemplate = this.getMyTemplates().allTemplates.filter(
+      (t) => t.patternId === opt.patternId,
+    ).length === 1;
     return this.changeCase(
       hasSingleTemplate ? opt.patternId : `${opt.patternId}-${opt.templateId}`,
     );
@@ -187,14 +187,13 @@ export class KnapsackBodilessRenderer extends Base implements Renderer {
               (t) => t.id === slotItem.templateId,
             );
 
-            const { usage, imports: slotImports } =
-              await this.getUsageAndImports({
-                pattern: slotPattern,
-                template: slotTemplate,
-                demo: slotTemplate?.demosById[slotItem.demoId],
-                patternManifest,
-                isForCodeBlock,
-              });
+            const { usage, imports: slotImports } = await this.getUsageAndImports({
+              pattern: slotPattern,
+              template: slotTemplate,
+              demo: slotTemplate?.demosById[slotItem.demoId],
+              patternManifest,
+              isForCodeBlock,
+            });
             imports.push(...slotImports);
             return usage;
           }),
@@ -212,11 +211,12 @@ export class KnapsackBodilessRenderer extends Base implements Renderer {
       (cur, { slotName, usages }) => {
         if (usages.length > 1) {
           throw new Error(
-            `This renderer does not support multiple items in a single slot; it can only have one item in a slot.`,
+            'This renderer does not support multiple items in a single slot; it can only have one item in a slot.',
           );
         }
         const [value] = usages;
         if (!value) return cur;
+        // eslint-disable-next-line no-param-reassign
         cur[slotName] = {
           type: 'raw',
           value,
@@ -230,7 +230,8 @@ export class KnapsackBodilessRenderer extends Base implements Renderer {
       bodilessTokens: Object.entries(props)
         .flatMap(([name, value]) => {
           if (isObject(value)) {
-            // in `inferSpec` we will make an object of boolean for pure-presentational purposes, so let's flatten them here.
+            // in `inferSpec` we will make an object of boolean for
+            // pure-presentational purposes, so let's flatten them here.
             return Object.entries(value);
           }
           return [[name, value]];
@@ -257,7 +258,9 @@ export class KnapsackBodilessRenderer extends Base implements Renderer {
   }
 
   async render(opt: Parameters<Base['render']>[0]): ReturnType<Base['render']> {
-    const { patternManifest, pattern, template, demo } = opt;
+    const {
+      patternManifest, pattern, template, demo
+    } = opt;
     const { componentExportName: componentExportName2 } = this.getSpec({
       patternId: pattern.id,
       templateId: template.id,
@@ -274,21 +277,21 @@ export class KnapsackBodilessRenderer extends Base implements Renderer {
       });
       const templateName = Base.isTemplateDemo(opt.demo)
         ? this.getJsImport({
-            patternId: pattern.id,
-            templateId: template.id,
-            demoId: demo.id,
-          }).importInfo.name
+          patternId: pattern.id,
+          templateId: template.id,
+          demoId: demo.id,
+        }).importInfo.name
         : this.getTemplateName({
-            patternId: pattern.id,
-            templateId: template.id,
-          });
+          patternId: pattern.id,
+          templateId: template.id,
+        });
       const prep = Base.isTemplateDemo(opt.demo)
         ? usage
         : `const ${templateName} = ${usage}(${
-            isForCodeBlock
-              ? `${componentExportName2}`
-              : `${template.alias}.component`
-          })`;
+          isForCodeBlock
+            ? `${componentExportName2}`
+            : `${template.alias}.component`
+        })`;
 
       let importsForCodeBlock = '';
       if (isForCodeBlock) {
@@ -330,15 +333,14 @@ export class KnapsackBodilessRenderer extends Base implements Renderer {
       return { code, imports };
     };
 
-    const [{ code: demoApp, imports }, { code: demoAppUsage }] =
-      await Promise.all([
-        createDemoCode({
-          isForCodeBlock: false,
-        }),
-        createDemoCode({
-          isForCodeBlock: true,
-        }),
-      ]);
+    const [{ code: demoApp, imports }, { code: demoAppUsage }] = await Promise.all([
+      createDemoCode({
+        isForCodeBlock: false,
+      }),
+      createDemoCode({
+        isForCodeBlock: true,
+      }),
+    ]);
     return this.prepClientRenderResults({
       demoApp,
       usage: demoAppUsage,
@@ -361,12 +363,14 @@ export class KnapsackBodilessRenderer extends Base implements Renderer {
           `No named export "${template.alias}" found after importing from "${templatePath}"`,
         );
       }
-      const { tokens, slots, componentExportName, tokensExportName } =
-        bodilessSpec;
+      const {
+        tokens, slots, componentExportName, tokensExportName
+      } = bodilessSpec;
       const props: KsTemplateSpec['props'] = Object.entries(tokens).reduce(
         (cur, [tokenName, token]) => {
           const group = token.Meta?.categories?.Group?.[0];
           if (!group) {
+            // eslint-disable-next-line no-param-reassign
             cur.properties[tokenName] = {
               type: 'boolean',
               description: '',
@@ -382,6 +386,7 @@ export class KnapsackBodilessRenderer extends Base implements Renderer {
             groupObject.properties[tokenName] = {
               type: 'boolean',
             };
+            // eslint-disable-next-line no-param-reassign
             cur.properties[group] = groupObject;
           }
           return cur;
@@ -396,6 +401,7 @@ export class KnapsackBodilessRenderer extends Base implements Renderer {
       const slotsSpec: KsTemplateSpec['slots'] = Object.entries(
         slots || {},
       ).reduce((cur, [slotName, { title, description, allowedPatternIds }]) => {
+        // eslint-disable-next-line no-param-reassign
         cur[slotName] = {
           title,
           description,
